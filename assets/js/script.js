@@ -5,15 +5,15 @@ $('#currentDay').text(today.format("D MMM YYYY"));
 
 // Timeblocks
 
-var hours = ['8am', '9am', '10am', '11am'];
+var hours = ['8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'];
 
 for (var i = 0; i < hours.length; i++) {
 
     var container = $('.container');
     var timeBlock = $('<div>').addClass('time-block');
-    var hour = $('<div>').addClass('hour');
+    var hour = $('<div>').addClass('hour').text(hours[i]);
     var textarea = $('<textarea>').addClass('row');
-    var saveBtn = $('<button>').addClass('saveBtn');
+    var saveBtn = $('<button>').addClass('saveBtn').html('<i class="fa-solid fa-floppy-disk"></i>');
 
     // Append hour, textarea, and save button to the time-block
     timeBlock.append(hour, textarea, saveBtn);
@@ -21,20 +21,16 @@ for (var i = 0; i < hours.length; i++) {
     // Append the time-block to the container
     container.append(timeBlock);
 
+
+    //Add colours to each time block depending on the real time
+    var currentHour = dayjs().hour();
+
+    if (parseInt(hours[i]) === currentHour) {
+        textarea.addClass('present');
+    } else if (parseInt(hours[i]) === currentHour + 1) {
+        textarea.addClass('future');
+    } else {
+        textarea.addClass('past');
+    }
+
 }
-
-
-
-// //Create a new time block and add class
-// container.append(timeBlock);
-// container.children().eq(0).addClass("time-block");
-// var newTimeBlock = $('.time-block');
-
-// //Create the hour/description/button setions of the time block and append
-// newTimeBlock.append(hour);
-// newTimeBlock.append(textarea);
-// newTimeBlock.append(saveBtn);
-
-// newTimeBlock.children().eq(0).addClass('hour');
-// newTimeBlock.children().eq(1).addClass('row');
-// newTimeBlock.children().eq(2).addClass('saveBtn');
