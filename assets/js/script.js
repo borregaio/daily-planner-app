@@ -1,6 +1,7 @@
 //Display current date
 var today = dayjs();
-$('#currentDay').text(today.format("D MMM YYYY"));
+var day = today.format("dddd");
+$('#currentDay').text(day + ', ' + today.format('D MMM YYYY'));
 
 
 // Generate timeblocks
