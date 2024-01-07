@@ -1,10 +1,9 @@
 //Display current date
-
 var today = dayjs();
 $('#currentDay').text(today.format("D MMM YYYY"));
 
-// Timeblocks
 
+// Generate time-blocks
 var hours = ['8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM', '8PM'];
 
 for (var i = 0; i < hours.length; i++) {
@@ -22,7 +21,7 @@ for (var i = 0; i < hours.length; i++) {
     container.append(timeBlock);
 
 
-    //Add colours to each time block depending on the real time
+    //Add colours to each tim- block according to real time
     var currentHour = dayjs().hour();
 
     if (parseInt(hours[i]) === currentHour) {
