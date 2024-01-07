@@ -22,30 +22,25 @@ header {
   padding: 60px;
 }
 
-/* .container {
-  display: grid;
-  grid-template-columns: 10% 80% 10%;
-  grid-template-areas: "hour description saveBtn";
-} */
-
-.description {
+/* .description {
   white-space: pre-wrap;
-  grid-area: description;
-}
+
+} */
 
 .time-block {
   text-align: center;
   border-radius: 15px;
-
+  /* Added CSS to create a grid template for each time-block section */
   display: grid;
-  grid-template-columns: 10% 80% 10%;
-  grid-template-areas: "hour description saveBtn";
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-areas: "hour row saveBtn";
 }
 
 .row {
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;
+  grid-area: row;
 }
 
 .hour {
@@ -53,21 +48,24 @@ header {
   color: #000000;
   border-top: 1px dashed #000000;
   grid-area: hour;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .past {
   background-color: #d3d3d3;
-  color: white;
+  /* color: white; */
 }
 
 .present {
   background-color: #ff6961;
-  color: white;
+  /* color: white; */
 }
 
 .future {
   background-color: #77dd77;
-  color: white;
+  /* color: white; */
 }
 
 .saveBtn {

@@ -5,7 +5,7 @@ $('#currentDay').text(today.format("D MMM YYYY"));
 
 // Timeblocks
 
-var hours = ['8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'];
+var hours = ['8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM', '8PM'];
 
 for (var i = 0; i < hours.length; i++) {
 
@@ -33,4 +33,22 @@ for (var i = 0; i < hours.length; i++) {
         textarea.addClass('past');
     }
 
+    // Add event handler for the save button click
+    saveBtn.on('click', function () {
+        var savedText = $(this).siblings('textarea').val();
+        console.log(savedText);
+
+        // Get the corresponding hour for the saved text
+        var savedHour = $(this).siblings('.hour').text();
+        console.log(savedHour);
+
+        // Save the text to local storage using the hour as a key
+        localStorage.setItem(savedHour, savedText);
+    });
+
+    // Load saved text from local storage and set it to the corresponding textarea
+    var savedText = localStorage.getItem(hours[i]);
+    if (savedText) {
+        textarea.val(savedText);
+    }
 }
