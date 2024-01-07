@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to the Daily Planner App! This simple and intuitive application is designed to help you organize your daily tasks and events efficiently. The app is built using JavaScript, jQuery UI, and Day.js libraries.
+Welcome to the Daily Planner App! This simple and intuitive application is designed to help you organize your daily tasks and events efficiently.
 
 ![Screenshot](./assets/images/screenshot.png)
 
@@ -12,7 +12,14 @@ Welcome to the Daily Planner App! This simple and intuitive application is desig
 The deployed version can be accessed [here](https://borregaio.github.io/daily-planner-app/).
 
 
-## Key Features
+## Technologies Used
+- JavaScript
+- jQuery
+- jQuery UI
+- Day.js
+
+
+## Features
 
 **Display the Current Day:**
 When you open the planner, the current day is prominently displayed at the top of the calendar, providing you with instant awareness of today's date.
@@ -36,7 +43,7 @@ When you've entered your event, click the save button within the timeblock to st
 The app is designed to persist events between refreshes of the page. Your schedule remains intact, providing a seamless and uninterrupted planning experience.
 
 
-## Usage
+## Getting Started
 
 1. Clone the repository
     ```console
@@ -52,7 +59,7 @@ The app is designed to persist events between refreshes of the page. Your schedu
 3. Start planning your day by entering events in the timeblocks and saving them.
 
 
-## Steps
+## Steps Followed
 
 **Display the Current Day**
 ```javascript
