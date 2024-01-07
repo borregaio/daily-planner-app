@@ -22,13 +22,24 @@ header {
   padding: 60px;
 }
 
+/* .container {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-areas: "hour description saveBtn";
+} */
+
 .description {
   white-space: pre-wrap;
+  grid-area: description;
 }
 
 .time-block {
   text-align: center;
   border-radius: 15px;
+
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-areas: "hour description saveBtn";
 }
 
 .row {
@@ -41,6 +52,7 @@ header {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  grid-area: hour;
 }
 
 .past {
@@ -64,6 +76,7 @@ header {
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
+  grid-area: saveBtn;
 }
 
 .saveBtn i:hover {
