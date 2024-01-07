@@ -3,7 +3,7 @@ var today = dayjs();
 $('#currentDay').text(today.format("D MMM YYYY"));
 
 
-// Generate time-blocks
+// Generate timeblocks
 var hours = ['9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00'];
 
 for (var i = 0; i < hours.length; i++) {
@@ -14,14 +14,14 @@ for (var i = 0; i < hours.length; i++) {
     var textarea = $('<textarea>').addClass('row');
     var saveBtn = $('<button>').addClass('saveBtn').html('<i class="fa-solid fa-floppy-disk"></i>');
 
-    // Append hour, textarea, and save button to the time-block
+    // Append hour, textarea, and save button to the timeblock
     timeBlock.append(hour, textarea, saveBtn);
 
-    // Append the time-block to the container
+    // Append the timeblock to the container
     container.append(timeBlock);
 
 
-    //Add colours to each tim- block according to real time
+    //Add colours to each timeblock according to real time
     var currentHour = dayjs().hour();
 
     if (parseInt(hours[i]) === currentHour) {
