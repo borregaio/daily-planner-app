@@ -4,7 +4,7 @@ $('#currentDay').text(today.format("D MMM YYYY"));
 
 
 // Generate time-blocks
-var hours = ['8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM', '8PM'];
+var hours = ['9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00'];
 
 for (var i = 0; i < hours.length; i++) {
 
